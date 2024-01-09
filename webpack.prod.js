@@ -18,7 +18,7 @@ module.exports = merge(common ,{
           new CssMinimizerPlugin(),
           new TerserPlugin(),
           new HtmlWebpackPlugin({
-            template: "./src/template.html",
+            template: "./src/index.html",
             minify: {
                 removeAttributeQuotes: true,
                 collapseWhitespace: true,
@@ -29,7 +29,7 @@ module.exports = merge(common ,{
       },
     plugins: [
         new MiniCssExtractPlugin({filename: "[name].[contentHash].css"}), 
-        new CleanWebpackPlugin()
+        // new CleanWebpackPlugin()
     ],
     module: {
         rules: [
